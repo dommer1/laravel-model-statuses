@@ -7,7 +7,7 @@ use Dommer1\ModelStatuses\Status;
 trait HasStatuses {
 
     public function statuses() {
-        return $this->morphMany(Status::class)->latest('id');
+        return $this->morphMany(Status::class, 'model')->latest('id');
     }
 
     public function status() {
